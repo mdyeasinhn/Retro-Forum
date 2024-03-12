@@ -9,26 +9,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="CSS/style.css">
   </head>
-  <body>
+  <body class="font-mulish">
     <header class="container mx-auto mt-4">
+      <!-- nav section Start -->
       <nav class="flex justify-between ">
         <div>
             <img src="images/logo.png" alt="">
         </div>
         <div class="flex gap-4">
-            <img class="bg-[#0307121A]  rounded-lg" src="images/home.png" alt="">
-            <img class="bg-[#0307121A]" src="images/pencil.png" alt="">
-            <img class="bg-[#0307121A]" src="images/contact.png" alt="">
-            <img class="bg-[#0307121A]" src="images/flag.png" alt="">
+
+          <div class=" w-[56px] h-[56px] rounded-3xl bg-[#0307121A] p-3 "><img src="images/home.png" alt=""></div>
+          <div class="w-[56px] h-[56px] rounded-3xl bg-[#0307121A] p-3 "><img src="images/pencil.png" alt=""></div>
+          <div class="w-[56px] h-[56px] rounded-3xl bg-[#0307121A] p-3 "><img src="images/contact.png" alt=""></div>
+          <div class="w-[56px] h-[56px] rounded-3xl bg-[#0307121A] p-3 "><img src="images/flag.png" alt=""></div>
+          
 
             <div>
-                <button class="bg-[#797DFC]">Sign in</button>
+                <button class="bg-[#797DFC] rounded-3xl p-[10px] btn text-white text-xl h-[56px] w-[100px]">Sign in</button>
             </div>
 
         </div>
       </nav>
+      <!-- nav section End -->
+
     </header>
-    <main></main>
+    <main class="container mx-auto">
+      <!-- banner section Start -->
+      <section class="bg-[#12132D] h-[450px] rounded-xl mt-5 flex ">
+        <!-- banner left -->
+      <div class="pt-24 pl-24 space-y-5">
+        <h1 class="text-6xl font-black text-white">Welcome to the <br>
+          <span class="text-[#797DFC]">ReTro</span> Forum</h1>
+          <p class="text-xl text-white font-medium">Share your favorite opinion and win and <br> wp forum coffee mug!</p>
+          <input type="text" placeholder="Search here anything" name="" id="" class="w-[400px] h-[50px] rounded-xl pl-4 ">
+      </div>
+
+      <!-- banner right -->
+      <div class="bg-white h-[280px] w-[370px] p-12 rounded-2xl space-y-6 mt-32">
+      <div class=" flex  text-black"> <p>Registered Users</p> <p>01</p> </div>
+      <div class="flex  text-black"> <p>Forum</p> <p>05</p> </div>
+      <div class="flex  text-black"> <p>Topics</p> <p>01</p> </div>
+      <div class="flex  text-black"> <p>Replies</p> <p>01</p> </div>
+      </div> 
+      
+      
+      </section>
+      <!-- banner section Start -->
+
+    </main>
     <footer></footer>
     <script src="JS/app.js"></script>
   </body>
