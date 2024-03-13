@@ -35,29 +35,82 @@
     </header>
     <main class="container mx-auto">
       <!-- banner section Start -->
-      <section class="bg-[#12132D] h-[450px] rounded-xl mt-5 flex ">
+      <section class="bg-[#12132D] h-[450px] rounded-xl mt-5 flex justify-between">
         <!-- banner left -->
       <div class="pt-24 pl-24 space-y-5">
         <h1 class="text-6xl font-black text-white">Welcome to the <br>
           <span class="text-[#797DFC]">ReTro</span> Forum</h1>
           <p class="text-xl text-white font-medium">Share your favorite opinion and win and <br> wp forum coffee mug!</p>
-          <input type="text" placeholder="Search here anything" name="" id="" class="w-[400px] h-[50px] rounded-xl pl-4 ">
+
+          <!-- search bar -->
+          <div class="relative">
+            <input type="text" class="border border-gray-300 rounded-lg px-4 py-2 w-full" placeholder="Search here anything">
+            <button class="absolute inset-y-0 right-0 px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600">Search</button>
+          </div>
       </div>
 
       <!-- banner right -->
-      <div class="bg-white h-[280px] w-[370px] p-12 rounded-2xl space-y-6 mt-32">
-      <div class=" flex  text-black"> <p>Registered Users</p> <p>01</p> </div>
-      <div class="flex  text-black"> <p>Forum</p> <p>05</p> </div>
-      <div class="flex  text-black"> <p>Topics</p> <p>01</p> </div>
-      <div class="flex  text-black"> <p>Replies</p> <p>01</p> </div>
+      <div class="bg-white h-[250px] w-[370px] p-12 rounded-2xl space-y-6 mt-32 mr-24">
+      <div class=" flex justify-between  text-black"> <p>Registered Users</p> <p>01</p> </div>
+      <div class="flex  justify-between text-black"> <p>Forum</p> <p>05</p> </div>
+      <div class="flex  justify-between text-black"> <p>Topics</p> <p>01</p> </div>
+      <div class="flex  justify-between text-black"> <p>Replies</p> <p>01</p> </div>
       </div> 
       
       
       </section>
-      <!-- banner section Start -->
+      <!-- banner section End -->
+
+      <!-- Let’s Discuss section -->
+      <section>
+        <div class="text-center mt-20 ">
+          <h2 class="text-[#12132D] text-4xl font-black text-center">Let’s Discuss</h2>
+          <p class="text-[#12132D99]">Yes, you can run unit tests and view the results directly within the app. The <br>
+             integrated testing features allow for a streamlined .</p>
+        </div>
+        <!-- left item -->
+      <div class="flex gap-8">
+        <div class="w-[60%] h-[270px] flex bg-[#0307121A] rounded-xl p-5 mt-10">
+          <div class="w-[10%]"><img src="images/flag.png" alt=""></div>
+          <div>
+            <div class="flex gap-2">
+              <p>#<span>coding </span></p>
+              <p>Author :<span>Yeasin</span></p>
+            </div>
+            
+            <h2 class="text-3xl font-extrabold mt-3">JavaScript Programing : Advanced <br> Techniques</h2>
+            <p class="mt-4">It’s one thing to subject yourself to ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
+            <hr class=" border border-dashed">
+              <div class="mt-5 flex justify-between ">
+                <div class="flex gap-5">
+                  <p class="flex gap-3"><img src="images/comment.png" alt=""> 560</p>
+                <p class="flex gap-3"><img src="images/view.png" alt=""> 1,568</p>
+                <p class="flex gap-3"><img src="images/clock.png" alt=""> 5 min</p>
+                </div>
+                <button><img src="images/email 1.png" alt=""></button>
+          
+              </div>
+          </div>
+        </div>
+
+        <!-- right item -->
+        <div class="w-[40%] h-[270px] flex bg-[#0307121A] rounded-xl p-5 mt-10 justify-between">
+          <div>
+            <h1 class="text-xl font-bold">Title </h1>
+          </div>
+          <div class="flex gap-2">
+            <img class="w-[24px] h-[24px]" src="images/Frame.png" alt="">
+            <p>Mark as read <span id="">4</span></p>
+          </div>
+        </div>
+      </div>
+      </section>
 
     </main>
     <footer></footer>
     <script src="JS/app.js"></script>
   </body>
 </html>
+
+
+
