@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro-Forum</title>
+        <!-- Font Owsome link -->
+        <script src="https://kit.fontawesome.com/b9da60a800.js" crossorigin="anonymous"></script>
+
     <!-- tailwind and daisy ui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"rel="stylesheet"type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -70,27 +73,11 @@
         </div>
         <!-- left item -->
       <div class="flex gap-8">
-        <div class="w-[60%] h-[270px] flex bg-[#0307121A] rounded-xl p-5 mt-10">
-          <div class="w-[10%]"><img src="images/flag.png" alt=""></div>
-          <div>
-            <div class="flex gap-2">
-              <p>#<span>coding </span></p>
-              <p>Author :<span>Yeasin</span></p>
-            </div>
+        <div class="w-[60%]  flex  rounded-xl p-5 mt-10">
+          <div class="flex flex-col w-full" id="contents">
             
-            <h2 class="text-3xl font-extrabold mt-3">JavaScript Programing : Advanced <br> Techniques</h2>
-            <p class="mt-4">It’s one thing to subject yourself to ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
-            <hr class=" border border-dashed">
-              <div class="mt-5 flex justify-between ">
-                <div class="flex gap-5">
-                  <p class="flex gap-3"><img src="images/comment.png" alt=""> 560</p>
-                <p class="flex gap-3"><img src="images/view.png" alt=""> 1,568</p>
-                <p class="flex gap-3"><img src="images/clock.png" alt=""> 5 min</p>
-                </div>
-                <button><img src="images/email 1.png" alt=""></button>
-          
-              </div>
           </div>
+          
         </div>
 
         <!-- right item -->
@@ -100,14 +87,29 @@
           </div>
           <div class="flex gap-2">
             <img class="w-[24px] h-[24px]" src="images/Frame.png" alt="">
-            <p>Mark as read <span id="">4</span></p>
+            <p>Mark as read <span id="post-count">0</span></p>
           </div>
         </div>
       </div>
       </section>
 
     </main>
-    <footer></footer>
+    <footer class="space-y-4 bg-[#12132D0D] pt-24">
+      <h2 class="text-center font-black text-3xl">ReTro</h2>
+      
+      <p class="text-center">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a <br> piece of classical Latin literature from 45 BC </p>
+      <div>
+          <div class="flex justify-center gap-4">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-github"></i>
+          </div>
+          <hr class="container mx-auto mt-5 border-2">
+          <p class="text-center mt-4 pb-24">2017, All Rights Reserved.</p>
+      </div>
+
+  </footer>
     <script src="JS/app.js"></script>
   </body>
 </html>
