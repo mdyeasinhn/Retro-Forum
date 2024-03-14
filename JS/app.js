@@ -1,25 +1,3 @@
-const postRead = document.getElementsByClassName('post-read');
-let count = 0;
-for (const btn of postRead) {
-    btn.addEventListener('click', function(e){
-        count++;
-
-        setInnerText('post-count', count)
-    })
-
-    
-}
-
-function setInnerText(id,value) {
-    document.getElementById(id).innerText = value;
-
-}
-
-
-
-
-
-
 
 const loadPost = async ()=>{
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
@@ -38,29 +16,77 @@ const displayPost = posts =>{
         const phoneCard = document.createElement('div');
         phoneCard.classList= `mb-2 bg-[#0307121A] w-full p-4 rounded-xl`;
         phoneCard.innerHTML=`
-        <div class="w-[10%]"><img src="images/flag.png" alt=""></div>
+        <div class="flex gap-2">
+        <div class="w-[10%] "><img src="${post.image}" alt=""></div>
           <div>
             <div class="flex gap-2">
-              <p>#<span>coding </span></p>
-              <p>Author :<span>Yeasin</span></p>
+              <p>#<span>${post.category}</span></p>
+              <p>Author :<span>${post.author.name}</span></p>
             </div>
             
-            <h2 class="text-3xl font-extrabold mt-3">JavaScript Programing : Advanced <br> Techniques</h2>
-            <p class="mt-4">It’s one thing to subject yourself to ha Halloween costume mishap because, <br> hey that’s your prerogative</p>
+            <h2 class="text-3xl font-extrabold mt-3">${post.title}</h2>
+            <p class="mt-4">${post.description}</p>
             <hr class=" border border-dashed">
               <div class="mt-5 flex justify-between ">
                 <div class="flex gap-5">
-                  <p class="flex gap-3"><img src="images/comment.png" alt=""> 560</p>
-                <p class="flex gap-3"><img src="images/view.png" alt=""> 1,568</p>
-                <p class="flex gap-3"><img src="images/clock.png" alt=""> 5 min</p>
+                  <p class="flex gap-3"><img src="images/comment.png" alt=""> ${post.comment_count}</p>
+                <p class="flex gap-3"><img src="images/view.png" alt="">${post.view_count}</p>
+                <p class="flex gap-3"><img src="images/clock.png" alt=""> ${post.posted_time} min</p>
                 </div>
-                <button class="post-read"><img src="images/email 1.png" alt=""></button>
+                <button onclick="addToCard()" class="post-read"><img src="images/email 1.png" alt=""></button>
           
               </div>
-          </div>
+          </div> </div>
          `
          contentArea.appendChild(phoneCard);
 
     })
 }
-loadPost()
+const loadCard = async ()=>{
+  const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
+  const data = await res.json();
+  const cards = data;
+  console.log(cards);
+  displayCard(cards);
+}
+
+
+
+const displayCard= cards =>{
+ console.log(cards);
+ cards?.forEach(card =>{
+  console.log(card);
+
+
+ })
+}
+
+
+
+
+let count =0;
+
+const addToCard=()=>{
+  count++;
+  setInnerText('post-count', count);
+
+
+}
+
+
+loadPost();
+loadCard();
+
+
+
+
+
+
+
+
+
+
+
+function setInnerText(id,value) {
+    document.getElementById(id).innerText = value;
+}
